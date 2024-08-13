@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-
+import mongoose from "mongoose";
 const WeatherSchema = new mongoose.Schema({
   city: String,
   country: String,
@@ -11,4 +10,6 @@ const WeatherSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Weather', WeatherSchema);
+const Weather = mongoose.model('Weather', WeatherSchema);
+
+export default Weather;

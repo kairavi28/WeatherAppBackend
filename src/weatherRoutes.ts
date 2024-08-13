@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import Weather from './model/Weather';
+
 const router = express.Router();
-const Weather = require('./model/Weather');
 
 // @desc    Create new weather data
 // @route   POST /api/weather
@@ -15,4 +16,4 @@ router.post('/weather', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
